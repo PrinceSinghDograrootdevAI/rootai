@@ -1,0 +1,39 @@
+.root {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root-content {
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.root-btn {
+  background-color: white;
+  color: black;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.root-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.root-content p {
+  font-size: 1.2rem;
+}
+

@@ -1,0 +1,263 @@
+/* .card-container {
+  background: #fff;
+  padding: 50px 25px;
+  width: 300px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: left;
+
+}
+
+.card-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-definition {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.s1lineContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+   margin-left: -20px;
+}
+
+.s1line {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+.s1edge-line {
+  width: 5%;
+  height: 2px;
+  background-color: #007bff; 
+  margin-right: 5px;
+}
+
+.s1middle-line {
+  flex: 1;
+  height: 2px;
+  background-color: #ddd; 
+}
+
+.card-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+font-family: 'Sora'
+}
+
+.card-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.card-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 4px;
+  height: 8px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+
+.learn-more-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  color:black;
+  cursor: pointer;
+  padding: 0;
+}
+
+.circle {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: #007bff;
+}
+
+.arrow {
+  font-size: 16px;
+  color:white;
+   font-weight: bold;
+}
+
+
+.card-container {
+  border: none;
+  border-top: 2px solid transparent; 
+  padding: 50px 25px;
+  width: 300px;
+  text-align: left;
+  background: #fff;
+}
+
+.card-wrapper .card-container:nth-of-type(1) {
+  border-top-color: #007bff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-wrapper .card-container:nth-of-type(2),
+.card-wrapper .card-container:nth-of-type(3) {
+  border-top-color: #d3d3d3;
+  box-shadow: none;
+}*/
+.card-container {
+  background: #fff;
+  padding: 50px 25px;
+  width: 300px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: left;
+
+}
+
+.card-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-definition {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.s1lineContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+   margin-left: -20px;
+}
+
+.s1line {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+.s1edge-line {
+  width: 5%;
+  height: 2px;
+  background-color: #007bff; 
+  margin-right: 5px;
+}
+
+.s1middle-line {
+  flex: 1;
+  height: 2px;
+  background-color: #ddd; 
+}
+
+.card-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+font-family: 'Sora'
+}
+
+.card-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #333;
+
+}
+
+.card-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 4px;
+  height: 8px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+
+.learn-more-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  color:black;
+  cursor: pointer;
+  padding: 0;
+}
+
+.circle {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: #007bff;
+}
+
+.arrow {
+  font-size: 16px;
+  color:white;
+   font-weight: bold;
+}
+
+
+.card-container {
+  border: none;
+  border-top: 2px solid transparent; 
+  padding: 50px 25px;
+  width: 300px;
+  text-align: left;
+  background: #fff;
+}
+
+
+.card-container {
+  border: none;
+  border-top: 2px solid transparent;
+  box-shadow: none;
+  transition: border-top-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card-container:hover {
+  border-top-color: #007bff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-wrapper:hover .card-container:not(:hover) {
+  border-top-color: #d3d3d3;
+  box-shadow: none; 
+}
+

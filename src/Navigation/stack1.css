@@ -1,0 +1,90 @@
+.stack-outer-wrapper {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.stack-rotated-div {
+  /* transform: rotate(-1.5deg); */
+  background: white;
+  padding: 60px 20px;
+  margin: 0 20px;
+}
+
+.stack-container {
+  max-width: 1000px;
+  margin: auto;
+  /* transform: rotate(1.5deg);  */
+}
+
+.stack-header {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.our-tool-btn {
+  background: transparent;
+  border: 2px solid #007BFF;
+  color: #007BFF;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.stack-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.stack-header .highlight {
+  color: #000;
+}
+
+.stack-header .blue-text {
+  color: #2196f3;
+}
+
+.stack-subheading {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 10px;
+  max-width: 700px;
+}
+
+.pill-grid {
+  height:300px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+
+.pill {
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 500;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.pill.white {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+}
+
+.pill.white-orange {
+  background-color: #fff;
+  color: orange;
+  border: 1px solid orange;
+}
+
+.pill.black {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}

@@ -1,0 +1,169 @@
+* {
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+.footer{
+    position: relative;
+}
+.footerImage{
+    width:100%;
+    height: 800px;
+    background-color: #4d5868 !important;
+    /* background-color: #494f60; */
+    filter: brightness(20%);   
+    padding-top: 80px; 
+    padding-bottom: 80px;
+   
+
+}
+.footerp{
+    margin-bottom: 30px;
+}
+.footerpara{
+    color: #FFFFFF80;
+    font-family: 'Sora';
+}
+.footerpara1{
+    font-size: 40px;
+    color: white;
+    display: inline;
+}
+.footerpara2{
+    font-size: 40px;
+    color: #0D99FF;
+    display: inline;
+}
+.footerpara3{
+    font-size: 40px;
+    color: white;
+}
+.fbox1{
+    
+   
+    position: absolute;
+    bottom: 300px;
+    left:107px;
+    width:403px;
+    height:434px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+.LogoSign{
+    color: white;
+    width: 200px;
+    height: 130px;
+
+}
+.fbox2{
+   
+    position: absolute;
+    width:400px;
+    height:434px;
+    bottom: 300px;
+    left:610px;
+    color:aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+.fbox3{
+   
+    position: absolute;
+    width:343px;
+    height:434px;
+    bottom: 300px;
+    right:120px;
+    color:aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.fbox3box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 70px;
+    gap: 20px;
+}
+.button1{
+     width: 400px;
+     height: 60px;
+     border-radius: 30px;
+     background-color: #2D333A;
+     border: none;
+      outline: none;  
+      color : white;
+      padding-left: 30px;
+    
+   
+    
+}
+.button1::placeholder{
+    color:aliceblue;
+    
+    border: none;
+      outline: none ; 
+    
+
+}
+.button2{
+     width:400px;
+     height:60px;
+     border-radius: 30px;
+     color: white;
+     background-color: #0D99FF;
+     border: none;
+}
+.flineContainer{
+    position: absolute;
+    bottom: 300px;
+   width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.fline {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+.fedge-line {
+  display: inline;
+  width: 1.5%;
+  height: 2px;
+  background-color: #0D99FF;
+  margin: 0 5px;
+}
+
+.fmiddle-line {
+  display: inline;
+  flex: 1;
+  height: 2px;
+  width: 97%;
+  background-color: #ddd;
+  margin: 0 5px;
+}
+.flastdiv{
+    width: 100%;
+    position: absolute;
+    bottom: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 260px;
+    padding-right: 260px;
+}
+.fSocial1{
+     color: whitesmoke;
+     display: flex;
+     flex-direction: row;
+     gap: 20px;
+}
+.fSocial2{
+     color: whitesmoke;
+}

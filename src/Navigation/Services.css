@@ -1,0 +1,48 @@
+.s1lineContainer{
+   width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.s1line {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+.s1edge-line {
+  display: inline;
+  width: 1.5%;
+  height: 2px;
+  background-color:blue;
+  margin: 0 5px;
+}
+.edge-line{
+  background-color: blue;
+}
+
+.s1middle-line {
+  display: inline;
+  flex: 1;
+  height: 2px;
+  width: 97%;
+  background-color: #ddd;
+  margin: 0 5px;
+}
+
+.card-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+.section-image-wrapper {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+}
