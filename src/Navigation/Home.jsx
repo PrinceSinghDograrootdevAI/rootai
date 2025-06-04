@@ -37,8 +37,37 @@ import bluelogo from '../Pictures/Vector.png';
 import greylogo from '../Pictures/greylogo.png';
 
 import './Home.css';
-
+const CLIENT_ID = "368088075490-r5bc3vo76mjfsgeaulhso5o6ucue09cq.apps.googleusercontent.com";
+const SHEET_ID = '1V9obfXkyRKK4MSKdvVTPF7m62RAbnWvAPoSagz-p3Hk';
 const Home = () => {
+     const [formData, setFormData] = useState({
+        name: '',
+        telephone: '',
+        email: '',
+        message: '',
+      });
+    
+      const [file, setFile] = useState(null);
+      const [tokenClient, setTokenClient] = useState(null);
+      const [accessToken, setAccessToken] = useState('');
+      const fileInputRef1 = useRef(null);
+    useEffect (()=>{
+      const identityScript = document.createElement('script');
+    identityScript.src = 'https://accounts.google.com/gsi/client';
+    identityScript.onload = () => {
+      const client = window.google.accounts.oauth2.initTokenClient({
+        client_id: CLIENT_ID,
+        scope: 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/spreadsheets',
+        callback: (tokenResponse) => {
+          if (tokenResponse.access_token) {
+            setAccessToken(tokenResponse.access_token);
+          }
+        },
+      });
+      setTokenClient(client);
+    };
+    document.body.appendChild(identityScript);
+    },[]);
     const image = [image1, image2, image3];
     const [currentIndex, setCurrentIndex] = useState(0);
     useEffect(()=>{
@@ -80,6 +109,84 @@ const Home = () => {
   const handleIconClick = () => {
     fileInputRef.current.click(); 
   };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+  const handleIconClick1 = () => {
+    fileInputRef1.current.click();
+  };
+
+  const uploadFileToDrive = async (file) => {
+    const metadata = {
+      name: file.name,
+      mimeType: file.type,
+    };
+    const form = new FormData();
+    form.append('metadata', new Blob([JSON.stringify(metadata)], { type: 'application/json' }));
+    form.append('file', file);
+
+    const response = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart', {
+      method: 'POST',
+      headers: new Headers({ Authorization: 'Bearer ' + accessToken }),
+      body: form,
+    });
+
+    const data = await response.json();
+    const fileId = data.id;
+
+    await fetch(`https://www.googleapis.com/drive/v3/files/${fileId}/permissions`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        role: 'reader',
+        type: 'anyone',
+      }),
+    });
+
+    return `https://drive.google.com/uc?id=${fileId}`;
+  };
+
+  const submit = async () => {
+    if (!accessToken) {
+      tokenClient.requestAccessToken();
+      return;
+    }
+
+    let fileUrl = '';
+    if (file) {
+      fileUrl = await uploadFileToDrive(file);
+    }
+
+    const values = [[
+      formData.name,
+      formData.email,
+      formData.telephone,
+      formData.message,
+      fileUrl,
+      new Date().toLocaleString()
+    ]];
+
+    await window.gapi.client.sheets.spreadsheets.values.append({
+      spreadsheetId: SHEET_ID,
+      range: 'Sheet1!A1',
+      valueInputOption: 'RAW',
+      insertDataOption: 'INSERT_ROWS',
+      resource: { values },
+    });
+
+    alert('Form submitted successfully!');
+  };
+
+
   return (
     <div className='bigbox'>
       <img src={image[currentIndex]} alt="Something" className="myImage" />
@@ -428,19 +535,20 @@ const Home = () => {
           <div className='section312'>
             <div className='section312cont1'>
 
-              <input type="text" placeholder="Name*" className="inputtag1"></input>
-              <input type="text" placeholder="Email*" className="inputtag1"></input>
-              <input type="text" placeholder="Telephone*" className="inputtag1"></input>
+              <input type="text" placeholder="Name" name="name" className="inputtag1" value={formData.name} onChange={handleChange} required />
+              <input type="text" placeholder="Email" name="email" className="inputtag1" value={formData.email} onChange={handleChange} required />
+              <input type="text" placeholder="Telephone" name="telephone" className="inputtag1" value={formData.telephone} onChange={handleChange} required />
+              <input type="file" ref={fileInputRef1} name='file' className='inputtag2' accept=".pdf,.doc,.docx,.jpg,.png,.xlsx" onChange={handleFileChange} style={{ display: 'none' }} />
               
-              <input type="file" ref={fileInputRef} placeholder="file" className='inputtag2'></input>
+              
               <div className='section312cont11'>  {/* <FaUpload size={40} color="#4CAF50" style={{ cursor: "pointer" }} onClick={handleIconClick}/> */}
-                <img src={uploadsymbol} style={{ cursor: "pointer" }} className='inputtag3' onClick={handleIconClick}></img>
+                <img src={uploadsymbol} style={{ cursor: "pointer" }} className='inputtag3' onClick={handleIconClick1}></img>
                 <div> <p className='inputtag4'>Attach Your file</p>
                 <p className='inputtag5'>up to 10MB</p></div>
                 </div>
             </div>
             <div className="section312cont2">
-              <textarea placeholder="Message*" className='Message'></textarea>
+               <textarea placeholder="Message" className='Message' name='message' value={formData.message} onChange={handleChange}></textarea>
               <p className='inputtag6'>We will process your personal information in accordance with our privacy policy</p>
                <div className='inputtag7'><input  type="checkbox"   /> <p>I would like to be contacted with news and updated about your events and services</p></div>
                {/* checked={isChecked} onChange={handleCheckboxChange} */}

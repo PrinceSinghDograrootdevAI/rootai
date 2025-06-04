@@ -10,7 +10,7 @@ position: relative;
   color:#FFFFFF;
   /* filter: blur(165.33px); */
   border-radius: 25px;
-  font-size: 12.99px;
+  font-size: 16.99px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,12 +20,14 @@ position: relative;
 }
 .contact12{
   font-family: 'Syne';
-  font-size: 40.57px;
+  font-size: 50.57px;
+  font-weight: 700;
   color: #FFFFFF;
 }
 .contact13{
   font-family: 'sora';
-  font-size: 12.99px;
+  font-size: 16.99px;
+  font-weight: 700;
   color: #FFFFFF;
 }
 .contactsection{
@@ -36,13 +38,14 @@ position: relative;
   
 }
 .contactusbox{
+  width:100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: absolute;
   bottom: 400px;
-  left: 600px;
+  /* left: 600px; */
   gap: 10px;
 }
 .contactusbox.p{
@@ -149,7 +152,7 @@ position: relative;
   width:100%;
   height:60px;
   border-radius: 20px;
-  background-color: blue !important;
+  background-color: #0D99FF !important;
   color:white;
   border: none;
 }

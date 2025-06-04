@@ -64,7 +64,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import './Contact.css';
 import uploadsymbolb from '../Pictures/uploadsymbolb.png';
 import ContactUs1 from '../Pictures/contactUs.png';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, LoadScript} from '@react-google-maps/api';
 
 const CLIENT_ID = "368088075490-r5bc3vo76mjfsgeaulhso5o6ucue09cq.apps.googleusercontent.com";
 const SHEET_ID = '1V9obfXkyRKK4MSKdvVTPF7m62RAbnWvAPoSagz-p3Hk';
@@ -83,19 +83,19 @@ const ContactUs = () => {
   const fileInputRef = useRef(null);
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://apis.google.com/js/api.js';
-    script.onload = () => {
-      window.gapi.load('client', async () => {
-        console.log("The data 1 ");
-        await window.gapi.client.init({
+    // const script = document.createElement('script');
+    // script.src = 'https://apis.google.com/js/api.js';
+    // script.onload = () => {
+    //   window.gapi.load('client', async () => {
+    //     console.log("The data 1 ");
+    //     await window.gapi.client.init({
           
-          discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4']
-        });
-        console.log("The data 2");
-      });
-    };
-    document.body.appendChild(script);
+    //       discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4']
+    //     });
+    //     console.log("The data 2");
+    //   });
+    // };
+    // document.body.appendChild(script);
 
     const identityScript = document.createElement('script');
     identityScript.src = 'https://accounts.google.com/gsi/client';
@@ -126,68 +126,81 @@ const ContactUs = () => {
   const handleIconClick = () => {
     fileInputRef.current.click();
   };
+ 
+  // const uploadFileToDrive = async (file) => {
+  //   const metadata = {
+  //     name: file.name,
+  //     mimeType: file.type,
+  //   };
+  //   const form = new FormData();
+  //   form.append('metadata', new Blob([JSON.stringify(metadata)], { type: 'application/json' }));
+  //   form.append('file', file);
 
-  const uploadFileToDrive = async (file) => {
-    const metadata = {
-      name: file.name,
+  //   const response = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart', {
+  //     method: 'POST',
+  //     headers: new Headers({ Authorization: 'Bearer ' + accessToken }),
+  //     body: form,
+  //   });
+
+    // const data = await response.json();
+    // const fileId = data.id;
+
+    // await fetch(`https://www.googleapis.com/drive/v3/files/${fileId}/permissions`, {
+    //   method: 'POST',
+    //   headers: {
+    //     Authorization: `Bearer ${accessToken}`,
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     role: 'reader',
+    //     type: 'anyone',
+    //   }),
+    // });
+
+    // return `https://drive.google.com/uc?id=${fileId}`;
+  // };
+
+  const submit = async (e) => {
+    // if (!accessToken) {
+    //   tokenClient.requestAccessToken();
+    //   return;
+    // }
+
+    // let fileUrl = '';
+    // if (file) {
+    //   fileUrl = await uploadFileToDrive(file);
+    // }
+     const metadata = {
+    name: file.name,
       mimeType: file.type,
-    };
+   };
     const form = new FormData();
     form.append('metadata', new Blob([JSON.stringify(metadata)], { type: 'application/json' }));
     form.append('file', file);
+    
 
-    const response = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart', {
+    // await window.gapi.client.sheets.spreadsheets.values.append({
+    //   spreadsheetId: SHEET_ID,
+    //   range: 'Sheet1!A1',
+    //   valueInputOption: 'RAW',
+    //   insertDataOption: 'INSERT_ROWS',
+    //   resource: { values },
+    // });
+     e.preventDefault();
+    fetch("https://script.google.com/macros/s/AKfycbyvFGe19vpcygPhpur7RpnpVtV-RVHrzTOw2Ie_P4UaET90GLKhm-iWIcrI0URte3hc/exec", {
       method: 'POST',
-      headers: new Headers({ Authorization: 'Bearer ' + accessToken }),
-      body: form,
-    });
-
-    const data = await response.json();
-    const fileId = data.id;
-
-    await fetch(`https://www.googleapis.com/drive/v3/files/${fileId}/permissions`, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        role: 'reader',
-        type: 'anyone',
-      }),
-    });
-
-    return `https://drive.google.com/uc?id=${fileId}`;
-  };
-
-  const submit = async () => {
-    if (!accessToken) {
-      tokenClient.requestAccessToken();
-      return;
-    }
-
-    let fileUrl = '';
-    if (file) {
-      fileUrl = await uploadFileToDrive(file);
-    }
-
-    const values = [[
-      formData.name,
-      formData.email,
-      formData.telephone,
-      formData.message,
-      fileUrl,
-      new Date().toLocaleString()
-    ]];
-
-    await window.gapi.client.sheets.spreadsheets.values.append({
-      spreadsheetId: SHEET_ID,
-      range: 'Sheet1!A1',
-      valueInputOption: 'RAW',
-      insertDataOption: 'INSERT_ROWS',
-      resource: { values },
-    });
-
+       headers: {
+    "Content-Type": "application/json"
+  },
+      body : JSON.stringify({formData}),
+      // body: new formData(formRef.current),
+    }).then(res => res.json())
+      .then(data => {
+        console.log(data);
+        // alert(data.msg);
+      })
+      .catch(err => console.log(err));
+    console.log(formData);
     alert('Form submitted successfully!');
   };
 
@@ -228,14 +241,31 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <LoadScript googleMapsApiKey="AIzaSyAMYyKhOZJ_3kPOZ1YLXWgt6g0RhbERyNw">
-        <GoogleMap mapContainerStyle={{ height: '750px', width: '100%' }} center={{ lat: 30.72, lng: 76.79 }} zoom={12}>
-          <Marker position={{ lat: 30.72, lng: 76.79 }} />
+      {/* <LoadScript googleMapsApiKey="AIzaSyAMYyKhOZJ_3kPOZ1YLXWgt6g0RhbERyNw" 
+        libraries={['marker']}>
+        <GoogleMap mapContainerStyle={{ height: '750px', width: '100%' }} center={{ lat: 30.72, lng: 76.79 }} zoom={12}
+         onLoad={(map) => {
+      if (
+        window.google &&
+        window.google.maps &&
+        window.google.maps.marker
+      ) {
+        const { AdvancedMarkerElement } = window.google.maps.marker;
+        const marker = new AdvancedMarkerElement({
+          position: { lat: 30.72, lng: 76.79 },
+          map: map,
+          title: 'Your Location'
+        });
+      } else {
+        console.warn("AdvancedMarkerElement is not available.");
+      }
+    }}>
+          <Marker position={{ lat: 30.72, lng: 76.79 }} 
+          />
         </GoogleMap>
-      </LoadScript>
+      </LoadScript> */}
     </div>
   );
 };
 
 export default ContactUs;
-``
