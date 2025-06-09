@@ -1,0 +1,290 @@
+* {
+    padding:0px;
+    margin:0px;
+     box-sizing: border-box;
+}
+.section1{
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section2{
+  font-size: 45px;
+  font-weight: 300;
+  font-family: 'Syne';
+  padding-left: 30px;
+  margin-bottom: 50px;
+}
+.section11{
+  padding-top: 85px;
+  width: 80%;
+  height: 900px;
+ 
+}
+.section111{
+  padding-left: 30px;
+
+
+  
+}
+.section111para1{
+border: 1px solid #0D99FF1A;
+width: 190px;
+border-radius: 20px;
+height:45px;
+display: flex;
+font-family: 'Syne';
+font-size: 16px;
+justify-content: center;
+align-items: center;
+color: #0D99FF;
+font-weight: 600;
+background-color: #0D99FF1A;
+margin-bottom: 35px;
+
+
+}
+.section111para{
+  display: flex;
+  justify-content: flex-end;
+  gap:20px;
+  
+}
+.section111para2{
+  display: inline;
+  background-color: white;
+  border: none;
+ 
+}
+.section111para3{
+  display: inline;
+  background-color: white;
+  border: none;
+
+ 
+}
+.slider{
+  height: 600px;
+  width: 100%;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  gap: 20px;
+}
+.slide{
+  height:600px;
+  width: 50%;
+  flex-shrink: 0;
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+}
+.slide1{
+  width:100%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.slide2{
+  margin-top: 40px;
+  width:100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+}
+.slide21{
+  width:40%;
+  padding-left: 50px;
+
+}
+.slide21para1{
+  font-size: 22.33px;
+  font-family: 'Syne';
+}
+.slide21para2{
+  margin-top: 10px;
+  color:#0D99FF;
+  font-size: 18px;
+}
+.slide22{
+  width:60%;
+  padding-right: 35px;
+  font-size: 18px;
+  
+}
+.slide1image{
+  width:90%;
+  height: 100%;
+  border-radius: 25px;
+  
+}
+
+.section2.img{
+  width: 278px;
+  height: 58px;
+}
+/* ---------- MAX WIDTH 1200px ---------- */
+@media (max-width: 1200px) {
+  .section11 {
+    width: 90%;
+  }
+
+  .slide {
+    width: 60%;
+  }
+
+  .slide21 {
+    padding-left: 30px;
+  }
+
+  .slide22 {
+    padding-right: 20px;
+  }
+}
+
+
+/* ---------- MAX WIDTH 992px ---------- */
+@media (max-width: 992px) {
+  .section2 {
+    font-size: 38px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  .section11 {
+    width: 95%;
+    padding-top: 60px;
+    height: auto;
+  }
+
+  .section111 {
+    padding-left: 20px;
+  }
+
+  .section111para1 {
+    width: 170px;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  .slide {
+    width: 80%;
+  }
+
+  .slide21para1 {
+    font-size: 20px;
+  }
+
+  .slide21para2 {
+    font-size: 16px;
+  }
+
+  .slide22 {
+    font-size: 16px;
+  }
+}
+
+
+/* ---------- MAX WIDTH 768px ---------- */
+@media (max-width: 768px) {
+  .section2 {
+    font-size: 32px;
+    padding-left: 15px;
+  }
+
+  .section111para {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .slider {
+    flex-direction: row;
+    height: auto;
+    gap: 40px;
+  }
+
+  .slide {
+    width: 100%;
+  
+  }
+
+ 
+
+  .slide2 {
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .slide21,
+  .slide22 {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .slide21para1 {
+    font-size: 18px;
+  }
+
+  .slide22 {
+    font-size: 15px;
+  }
+}
+
+
+/* ---------- MAX WIDTH 480px ---------- */
+@media (max-width: 480px) {
+  .section2 {
+    font-size: 26px;
+   
+    margin-bottom: 20px;
+  }
+  .section2 img{
+    width: 300px;
+    height:50px;
+  }
+  .section11 {
+    width: 100%;
+    padding-top: 40px;
+    padding: 20px;
+  }
+
+  .section111 {
+    padding-left: 10px;
+  }
+
+  .section111para1 {
+    width: 150px;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 15px;
+  }
+
+  .slide1image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .slide21para1 {
+    font-size: 16px;
+  }
+
+  .slide21para2 {
+    font-size: 14px;
+  }
+
+  .slide22 {
+    font-size: 14px;
+  }
+}

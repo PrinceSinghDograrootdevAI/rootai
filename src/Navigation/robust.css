@@ -15,7 +15,6 @@
   transform: translateX(-50%);
   width: 100%;
   height: 100%;
-  /* max-width: 800px; */
   opacity: 0.8;
   z-index: 0;
  
@@ -40,12 +39,15 @@
 }
 
 .robust-content {
-  position: absolute;
+
+    position: absolute;
   z-index: 2;
   max-width: 800px;
-  margin: 0 auto;
-  bottom:240px;
-  left: 450px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 240px;
+  padding: 0 20px;
 }
 .robust-content1{
   font-family: 'Syne';
@@ -60,7 +62,7 @@
 }
 
 .robust-content p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
   margin-bottom: 30px;
   color: #d3d3d3;
@@ -85,4 +87,138 @@
 .get-started-btn:hover {
   background-color: #00aaff;
   color: #fff;
+}
+@media (max-width: 1200px) {
+  .robust-content1 {
+    font-size: 70px;
+  }
+
+  .robust-content p {
+    font-size: 16px;
+  }
+
+  .dot-img {
+    width: 80px;
+  }
+
+  .last-img {
+    width: 100px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .robust-content1 {
+    font-size: 60px;
+  }
+
+  .robust-content h5 {
+    font-size: 18px;
+  }
+
+  .robust-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .get-started-btn {
+    font-size: 13px;
+    padding: 10px 24px;
+  }
+
+  .dot-img {
+    width: 70px;
+    top: 25%;
+    right: 3%;
+  }
+
+  .last-img {
+    width: 90px;
+    right: 8%;
+  }
+
+  .robust-section {
+    height: 650px;
+  }
+
+  .robust-content {
+    bottom: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .robust-content1 {
+    font-size: 48px;
+  }
+
+  .robust-content h5 {
+    font-size: 16px;
+  }
+
+  .robust-content p {
+    font-size: 14px;
+  }
+
+  .get-started-btn {
+    font-size: 12px;
+    padding: 9px 20px;
+  }
+
+  .dot-img {
+    width: 60px;
+    top: 22%;
+  }
+
+  .last-img {
+    width: 80px;
+    right: 5%;
+  }
+
+  .robust-section {
+    height: 600px;
+  }
+
+  .robust-content {
+    bottom: 180px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .robust-content1 {
+    font-size: 36px;
+  }
+
+  .robust-content h5 {
+    font-size: 14px;
+  }
+
+  .robust-content p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .get-started-btn {
+    font-size: 11px;
+    padding: 8px 18px;
+  }
+
+  .dot-img {
+    width: 50px;
+    top: 20%;
+  }
+
+  .last-img {
+    width: 70px;
+    right: 4%;
+  }
+
+  .robust-section {
+    height: 550px;
+  }
+
+  .robust-content {
+    bottom: 160px;
+    padding: 0 10px;
+  }
 }

@@ -6,9 +6,10 @@ import './footer.css';
 
 const footer = () => {
   return (
-    <div className="footer">
-        <img src={footerimage} alt="footerimage" className="footerImage"></img>
-    
+    <div className="footer" style={{ backgroundImage: `url(${footerimage})` }}>
+        {/* <img src={footerimage} alt="footerimage" className="footerImage"></img> */}
+        <div className='f'>
+        <div className='fbox'>
         <div className="fbox1">
           <div>
         <div>
@@ -36,11 +37,13 @@ const footer = () => {
                    </div>
         <div className="fbox3">
           <div className='fbox3box'>
-            <div><input placeholder="Your Email Address" className="button1"></input></div>
+            <div className='button'><input placeholder="Your Email Address" className="button1"></input></div>
           {/* <div><button className='button1'>Your Email Address</button></div> */}
-          <div><button className='button2'>Subscriber Now</button></div>
+          <div className='button'><button className='button2'>Subscriber Now</button></div>
           </div>
         </div>
+        </div>
+        <div className='last'>
          <div className='flineContainer'>
         <div className='fline'>
           <div className='fedge-line'></div>
@@ -57,6 +60,8 @@ const footer = () => {
           <div><p className="footerpara">LinkedIn</p></div>
         </div>
         <div className="fSocial2"><p className="footerpara">Privacy Policy</p></div>
+        </div>
+        </div>
         </div>
         </div>
     

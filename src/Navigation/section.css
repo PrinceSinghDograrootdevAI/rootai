@@ -111,3 +111,129 @@
   background-color: #0056b3;
   color: white;
 }
+@media (max-width: 1200px) {
+  .section {
+    padding: 40px 60px;
+    margin: 0px;
+  }
+
+  .section-text {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .contact-btn {
+    width: 200px;
+    height: 60px;
+    font-size: 15px;
+  }
+
+  .diagram {
+    width: 260px;
+    height: 180px;
+  }
+}
+
+/* === 992px === */
+@media (max-width: 992px) {
+  .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 30px;
+    margin: 0px;
+    gap: 20px;
+  }
+
+  .section-text {
+    font-size: 18px;
+    line-height: 28px;
+    height: auto;
+  }
+
+  .section-diagram {
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  .diagram {
+    width: 220px;
+    height: 150px;
+  }
+
+  .section-button {
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact-btn {
+    width: 200px;
+    height: 60px;
+  }
+}
+
+/* === 768px === */
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 20px;
+    margin: 0px;
+  }
+
+  .section-text {
+    font-size: 16px;
+  }
+
+  .diagram {
+    width: 180px;
+    height: 120px;
+  }
+
+  .contact-btn {
+    width: 180px;
+    height: 55px;
+    font-size: 14px;
+  }
+}
+
+/* === 480px === */
+@media (max-width: 480px) {
+  .section {
+    padding: 20px 10px;
+    margin: 0px !important;
+  }
+
+  .section-text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .diagram {
+    width: 150px;
+    height: 100px;
+  }
+
+  .contact-btn {
+    width: 160px;
+    height: 50px;
+    font-size: 13px;
+  }
+
+  .background-circle {
+    width: 55px;
+    height: 55px;
+  }
+
+  .icon-image {
+    width: 40%;
+    height: 40%;
+  }
+
+  .blue-dot {
+    width: 12px !important;
+    height: 12px !important;
+    bottom: 10px !important;
+    right: 12px !important;
+  }
+}

@@ -174,3 +174,149 @@
   height: auto;
   object-fit: contain;
 }
+@media (max-width: 1200px) {
+  .discovery-section {
+    padding-left: 120px;
+    padding-right: 120px;
+    height: auto;
+  }
+
+  .heading-tabs h2 {
+    font-size: 32px;
+  }
+
+  .tabs button {
+    font-size: 18px;
+  }
+
+  .image-content {
+    width: 350px;
+    height: 350px;
+  }
+
+  .paragraphs {
+    gap: 30px;
+  }
+}
+
+/* === 992px === */
+@media (max-width: 992px) {
+  .discovery-section {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .heading-tabs h2 {
+    font-size: 28px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .paragraphs {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-content {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* === 768px === */
+@media (max-width: 768px) {
+  .discovery-section {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .heading-tabs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .tabs button {
+    font-size: 16px;
+    padding: 6px 14px;
+  }
+
+  .discovery-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .image-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-content h3 {
+    font-size: 18px;
+  }
+
+  .paragraphs p {
+    font-size: 14px;
+  }
+}
+
+/* === 480px === */
+@media (max-width: 480px) {
+  .discovery-section {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .enterprise-btn {
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+  }
+
+  .heading-tabs h2 {
+    font-size: 22px;
+  }
+
+  .tabs button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .text-content h3 {
+    font-size: 16px;
+  }
+
+  .paragraphs p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .primary-btn, .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .image-content {
+    width: 100%;
+    height: auto;
+  }
+}

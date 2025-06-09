@@ -4,7 +4,16 @@
     box-sizing: border-box;
 }
 .contact1{
-position: relative;
+ height: 800px;
+  width: 100%;
+    object-fit: cover;
+ 
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .contact11{
   color:#FFFFFF;
@@ -30,141 +39,111 @@ position: relative;
   font-weight: 700;
   color: #FFFFFF;
 }
-.contactsection{
-  height: 800px;
-  width: 100%;
-    object-fit: cover;
-  display: block; 
-  
-}
+
 .contactusbox{
   width:100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
+  
   bottom: 400px;
-  /* left: 600px; */
+
   gap: 10px;
 }
 .contactusbox.p{
   color:aliceblue;
 }
-.csection3{
-  height: 800px;
-  width: 100%;
-  background-color: white !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (max-width:1200px){
+   .contact12 {
+    font-size: 42px;
+  }
 
-}
-.csection31{
-  width: 1240px;
-  height: 600px;
-  background-color: white !important;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
+  .contact13 {
+    font-size: 15px;
+  }
 
-}
-.csection311{
-  width: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
-  color: white;
-  margin-bottom: 50px;
-}
-.csection312{
-  display: flex;
-  padding-left: 40px;
-  padding-right: 40px;
-  width: 100%;
-  height: 80%;    
-  justify-content: space-between;
+  .contact11 {
+    width: 90px;
+    height: 22px;
+    font-size: 15px;
+  }
+
+  .contact1 {
+    height: 700px;
+  }
   
 }
-.csection312cont1{
-  width:40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap:30px;
-}
-.cinputtag1{
-  height: 60px;
-  border-radius: 20px;
-  background-color: #0000001A !important;
-  border: none;
-  border-color: black !important;
-  padding-left: 20px;
-  outline: none;
-}
-.cinputtag1::placeholder{
-  
-  color: black !important;
-}
-.cinputtag2{
-   height: 60px;
-  border-radius: 20px;
-  display: none;
-  border-color: black !important;
-}
-.cinputtag3{
-  height: 20px;
-  width:20px;
-  display: inline;
-  /* background-color: #0D99FF; */
-  color: blue !important;
-  border-color: black !important;
-}
-.csection312cont2{
-  width:40%;
-  display: flex;
-  flex-direction: column;
-}
+@media (max-width:992px){
+ .contact12 {
+    font-size: 36px;
+  }
 
-.cMessage{
-  height: 300px;
-  width: 100%;
-  border-radius: 20px;
-  background-color: #0000001A !important;
-  border : none;
-  outline: none;
- 
-  padding-left: 20px;
-  padding-top: 20px;
-  
+  .contact13 {
+    font-size: 14px;
+  }
+
+  .contact11 {
+    width: 85px;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  .contact1 {
+    height: 600px;
+  }
 }
-.cMessage::placeholder{
- 
-  color: black !important;
+@media(max-width:768px){
+  .contact12 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .contact13 {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .contact11 {
+    width: 80px;
+    height: 18px;
+    font-size: 13px;
+  }
+
+  .contact1 {
+    height: 550px;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contactusbox {
+    padding: 10px;
+  }
 }
-.csection313{
-  margin-top: 20px;
-  padding-left: 40px;
-  padding-right:40px;
-  display: flex;
-  justify-content: center;
-}
-.csection313cont1{
-  width:100%;
-  height:60px;
-  border-radius: 20px;
-  background-color: #0D99FF !important;
-  color:white;
-  border: none;
-}
-.cinputtag4{
-  color:black !important;
-  display: inline;
-}
-.csectionl{
-  width: 100%;
-  height: 600px;
-}
-.Googlemap{
-   width: '100%';
-  height: '400px';
+@media(max-width:480px){
+ .contact12 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .contact13 {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .contact11 {
+    width: 70px;
+    height: 16px;
+    font-size: 12px;
+  }
+
+  .contact1 {
+    height: 500px;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .contactusbox {
+    gap: 8px;
+  }
 }

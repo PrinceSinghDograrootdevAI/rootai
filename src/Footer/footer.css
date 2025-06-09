@@ -3,20 +3,36 @@
     margin:0px;
     box-sizing: border-box;
 }
-.footer{
-    position: relative;
+.f{
+    background-color: #040404d1;
+    height: 100%;
 }
-.footerImage{
-    width:100%;
-    height: 800px;
-    background-color: #4d5868 !important;
-    /* background-color: #494f60; */
-    filter: brightness(20%);   
-    padding-top: 80px; 
-    padding-bottom: 80px;
+.footer{
+    /* position: relative; */
+      width:100%;
+    height: 896px;
+    /* background-color: #4d5868 !important; */
+    background-color: #494f60 ;
+    /* filter: brightness(20%);    */
+    /* opacity: 0.8; */
+    /* padding-top: 80px; 
+    padding-bottom: 80px; */
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.footer::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* darkens the background */
+  z-index: 0;
+}
+/* .footerImage{
+  
    
 
-}
+} */
 .footerp{
     margin-bottom: 30px;
 }
@@ -38,17 +54,27 @@
     font-size: 40px;
     color: white;
 }
+.fbox{
+      /* position: absolute;
+      bottom: 300px; */
+      
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      
+      
+}
 .fbox1{
-    
-   
-    position: absolute;
+    /* position: absolute;
     bottom: 300px;
-    left:107px;
+    left:107px; */
     width:403px;
     height:434px;
     display : flex;
     justify-content: center;
     align-items: center;
+  
 }
 .LogoSign{
     color: white;
@@ -58,11 +84,11 @@
 }
 .fbox2{
    
-    position: absolute;
+    /* position: absolute; */
     width:400px;
     height:434px;
-    bottom: 300px;
-    left:610px;
+    /* bottom: 300px;
+    left:610px; */
     color:aliceblue;
     display: flex;
     justify-content: center;
@@ -71,11 +97,11 @@
 }
 .fbox3{
    
-    position: absolute;
+    /* position: absolute; */
     width:343px;
     height:434px;
-    bottom: 300px;
-    right:120px;
+    /* bottom: 300px;
+    right:120px; */
     color:aliceblue;
     display: flex;
     justify-content: center;
@@ -89,9 +115,10 @@
     flex-direction: column;
     padding-bottom: 70px;
     gap: 20px;
+    width:100%;
 }
-.button1{
-     width: 400px;
+ .button1{
+     width: 100%;
      height: 60px;
      border-radius: 30px;
      background-color: #2D333A;
@@ -111,17 +138,31 @@
     
 
 }
-.button2{
-     width:400px;
+.button{
+    width: 100%;
+}
+ .button2{
+     width:100%;
      height:60px;
      border-radius: 30px;
      color: white;
      background-color: #0D99FF;
      border: none;
 }
+.last{
+    width: 100%;
+    /* position:absolute; */
+    bottom: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #2D333A; */
+}
 .flineContainer{
-    position: absolute;
-    bottom: 300px;
+    /* position: absolute; */
+    /* bottom: 300px; */
    width: 100%;
   display: flex;
   justify-content: center;
@@ -151,8 +192,8 @@
 }
 .flastdiv{
     width: 100%;
-    position: absolute;
-    bottom: 200px;
+    /* position: absolute;
+    bottom: 200px; */
     display: flex;
     justify-content: space-between;
     padding-left: 260px;
@@ -162,8 +203,61 @@
      color: whitesmoke;
      display: flex;
      flex-direction: row;
-     gap: 20px;
+     gap: 20px;  
 }
 .fSocial2{
      color: whitesmoke;
+}
+
+@media (max-width: 1200px) {
+ 
+  .flastdiv{
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}
+@media (max-width: 992px) {
+  .flastdiv{
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media (max-width: 768px) {
+    .flastdiv{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .fbox{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right:10px;
+  }
+  .footerpara{
+    font-size: 18px;
+  }
+  .last{
+    font-size: 20px;
+  }
+  .fSocial1{
+    
+     display: flex;
+     flex-direction: column;
+     gap: 20px;  
+}
+.footer{
+ height: 1500px;
+}
+}
+@media (max-width: 480px) {
+.flastdiv{
+ padding-left: 35px;
+ padding-right: 35px;
+}
+.footer{
+ height: 1445px;
+}
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./TechStack.css";
 
 const technologies = [
@@ -18,10 +18,13 @@ const technologies = [
 
 
 const TechStack = () => {
+  
   return (
     <div className="techstack-wrapper">
       <div className="header-container">
-        <div className="techstack-subtitle">Our Services</div>
+        <div className="title-content1">
+        <div className="techstack-subtitle"><p>Our Services</p></div>
+        </div>
         <div className="title-content">
           <h2 className="techstack-title">
             Our Prime <span>Technology Stack</span>

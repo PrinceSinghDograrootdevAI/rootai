@@ -5,6 +5,7 @@ import about from "../Pictures/about.png";
 import Layout from "./layout";
 import TechStack from "./TechStack"; 
 import Robust from "./robust";
+import Teamimages from './Teamimages';
 const AboutUs = () => {
   return (
     <div>
@@ -16,7 +17,9 @@ const AboutUs = () => {
       />
       <Layout />
       <TechStack /> 
+      <Teamimages />
       <Robust />
+
     </div>
   );
 };

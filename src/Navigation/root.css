@@ -11,8 +11,9 @@
   text-align: center;
   color: white;
   background: rgba(0, 0, 0, 0.5); 
-  padding: 20px;
+  padding: 0px;
   border-radius: 12px;
+  width: 100%;
 }
 
 .root-btn {
@@ -37,3 +38,53 @@
   font-size: 1.2rem;
 }
 
+@media(max-width: 1200px){
+.root-content h1 {
+    font-size: 2.5rem;
+  }
+  .root-content p {
+    font-size: 1.1rem;
+  }
+}
+@media(max-width: 992px){
+  .root-content h1 {
+    font-size: 2rem;
+  }
+  .root-content p {
+    font-size: 1rem;
+  }
+  .root-btn {
+    font-size: 0.95rem;
+    padding: 9px 20px;
+  }
+}
+@media(max-width: 768px){
+ .root {
+    padding: 20px;
+  }
+  .root-content {
+    width: 90%;
+  }
+  .root-content h1 {
+    font-size: 1.7rem;
+  }
+  .root-content p {
+    font-size: 0.95rem;
+  }
+  .root-btn {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+}
+@media(max-width: 480px){
+  .root-content h1 {
+    font-size: 1.4rem;
+  }
+  .root-content p {
+    font-size: 0.85rem;
+  }
+  .root-btn {
+    font-size: 0.85rem;
+    padding: 7px 16px;
+  }
+}
