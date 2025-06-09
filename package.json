@@ -12,6 +12,7 @@
   "dependencies": {
     "-": "^0.0.1",
     "@react-google-maps/api": "^2.20.6",
+    "build": "^0.1.4",
     "fs": "^0.0.1-security",
     "google-map-react": "^2.2.5",
     "icons": "^1.0.0",
